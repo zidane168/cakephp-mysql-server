@@ -1,0 +1,5 @@
+
+nếu bi bể giao diện thì phải chạy lại composer này: trong vendor remove cái maiconpinto
+
+composer require maiconpinto/cakephp-adminlte-theme
+

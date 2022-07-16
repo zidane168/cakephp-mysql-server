@@ -1,0 +1,62 @@
+msgid "setting"
+msgstr "設定"
+
+msgid "settings"
+msgstr "設定一覽"
+
+msgid "region"
+msgstr "地區"
+
+msgid "regions"
+msgstr "地區一覽"
+
+msgid "district"
+msgstr "大區"
+
+msgid "districts"
+msgstr "大區一覽"
+
+msgid "subdistrict"
+msgstr "小區"
+
+msgid "subdistricts"
+msgstr "小區一覽"
+
+msgid "add_region"
+msgstr "新增地區"
+
+msgid "edit_region"
+msgstr "編輯地區"
+
+msgid "add_district"
+msgstr "新增大區"
+
+msgid "edit_district"
+msgstr "編輯大區"
+
+msgid "add_subdistrict"
+msgstr "新增小區"
+
+msgid "edit_subdistrict"
+msgstr "編輯小區"
+
+msgid "price_setting"
+msgstr "價格設定"
+
+msgid "price_settings"
+msgstr "價格設定一覽"
+
+msgid "add_price_setting"
+msgstr "新增價格設定"
+
+msgid "edit_price_setting"
+msgstr "編輯價格設定"
+
+msgid "price_from"
+msgstr "價格從"
+
+msgid "price_to"
+msgstr "價格到"
+
+
+

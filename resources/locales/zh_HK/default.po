@@ -1,0 +1,254 @@
+msgid "good_morning"
+msgstr "早上好， "
+
+msgid "good_afternoon1"
+msgstr "下午好， "
+
+msgid "good_afternoon"
+msgstr "下午好， "
+
+msgid "good_evening"
+msgstr "晚上好， "
+
+msgid "zh_CN_name"
+msgstr "简体中文"
+
+msgid "zh_CN"
+msgstr "简体中文"
+
+msgid "zh_HK_name"
+msgstr "繁体中文"
+
+msgid "zh_HK"
+msgstr "繁体中文"
+
+msgid "en_US_name"
+msgstr "English"
+
+msgid "en_US"
+msgstr "English"
+
+msgid "id"
+msgstr "編號"
+
+msgid "slug"
+msgstr "別號"
+
+msgid "name"
+msgstr "名稱"
+
+msgid "modified_by"
+msgstr "修改用戶"
+
+msgid "created_by"
+msgstr "創建用戶"
+
+msgid "modified"
+msgstr "修改時間"
+
+msgid "created"
+msgstr "創建時間"
+
+msgid "add"
+msgstr "新增"
+
+msgid "edit"
+msgstr "編輯"
+
+msgid "view"
+msgstr "檢視"
+
+msgid "delete"
+msgstr "刪除"
+
+msgid "enabled"
+msgstr "啟用"
+
+msgid "email"
+msgstr "電郵地址"
+
+msgid "phone"
+msgstr "電話號碼"
+
+msgid "delete_all"
+msgstr "全部刪除"
+
+msgid "operation"
+msgstr "操作"
+
+msgid "submit"
+msgstr "提交"
+
+msgid "reset"
+msgstr "重設"
+
+msgid "export"
+msgstr "匯出CSV"
+
+msgid "export_excel"
+msgstr "匯出Excel"
+
+msgid "please_select"
+msgstr "-- 請選擇 --"
+
+msgid "sign_in"
+msgstr "登入"
+
+msgid "sign_out"
+msgstr "登出"
+
+msgid "remember_me"
+msgstr "記得我"
+
+msgid "password"
+msgstr "密碼"
+
+msgid "user_is_logged_out"
+msgstr "登出成功"
+
+msgid "retrieve_data_successfully"
+msgstr "成功取得資料"
+
+msgid "retrieve_data_not_successfully"
+msgstr "未能取得資料，請重試"
+
+msgid "image_type"
+msgstr "圖像類型"
+
+msgid "image"
+msgstr "圖像"
+
+msgid "status"
+msgstr "狀態"
+
+msgid "all"
+msgstr "全部"
+
+msgid "yes"
+msgstr "是"
+
+msgid "no"
+msgstr "否"
+
+msgid "data_is_saved"
+msgstr "質料已儲存"
+
+msgid "data_is_not_saved"
+msgstr "質料未儲存, 請重試"
+
+msgid "export_pdf"
+msgstr "匯出PDF"
+
+msgid "order_image"
+msgstr "排序圖片"
+
+msgid "guideline"
+msgstr "提示"
+
+msgid "delete_message"
+msgstr "請留意！你確定是否要刪除這ID={0}嗎?， 如果確定刪除了會無法再恢復， 你確定嗎？"
+
+msgid "data_is_deleted"
+msgstr "質料已刪除"
+
+msgid "google"
+msgstr "Google戶口"
+
+msgid "facebook"
+msgstr "Facebook戶口"
+
+msgid "add_image"
+msgstr "新增圖片"
+
+msgid "language"
+msgstr "語言"
+
+msgid "object_is_existed"
+msgstr "{0}已存在!"
+
+msgid "login_succeed"
+msgstr "登入成功"
+
+msgid "login_failed"
+msgstr "登入失敗"
+
+msgid "logout_succeed"
+msgstr "登出成功"
+
+msgid "logout_failed"
+msgstr "登出失敗"
+
+msgid "credit_over_load"
+msgstr "超出金額"
+
+msgid "invalid_data"
+msgstr "質料錯誤"
+
+msgid "missing_parameter"
+msgstr "缺少參數: "
+
+msgid "area_code"
+msgstr "區域碼"
+
+msgid "is_used"
+msgstr "已使用"
+
+msgid "not_yet_used"
+msgstr "沒使用"
+
+msgid "description"
+msgstr "描述"
+
+msgid "column_filter"
+msgstr "列篩選器"
+
+msgid "display_all"
+msgstr "顯示全部"
+
+msgid "mr"
+msgstr "先生"
+
+msgid "miss"
+msgstr "小姐"
+
+msgid "mrs"
+msgstr "太太"
+
+msgid "minutes ago"
+msgstr "分鐘前"
+
+msgid "hours ago"
+msgstr "小時前"
+
+msgid "days ago"
+msgstr "日前"
+
+msgid "minutes"
+msgstr "分鐘"
+
+msgid "hours"
+msgstr "小時"
+
+msgid "days"
+msgstr "日"
+
+msgid "checked"
+msgstr "已檢查"
+
+msgid "not_check"
+msgstr "沒檢查"
+
+msgid "content"
+msgstr "內容"
+
+msgid "thumbnail"
+msgstr "圖片"
+
+msgid "exist_violate"
+msgstr "這車位您已舉報了"
+
+msgid "file"
+msgstr "文件"
+
+msgid "files"
+msgstr "文件一覽"

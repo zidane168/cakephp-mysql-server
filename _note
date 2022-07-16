@@ -1,0 +1,35 @@
+----------------------------------------------------------------------------
+JWT Authentication config, setup
+Add JWT vendor      -> composer require firebase/php-jwt
+Add Authenticate    -> composer require cakephp/authentication
+
+----------------------------------------------------------------------------
+
+Demo Cache:
+
+{{host}}/api/v2/courses/get_all.json?language=zh_HK
+-> get all will ADD to Cache (cake_course_getAll)
+
+{{host}}/api/v1/courses/add_data.json
+-> get add new data and DELETE store from Cache (cake_course_getAll)
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+
+http://dev-vn.vtl-lab.com:9000/ -> docker 
+
+
+ssh -o PasswordAUthentication=yes vi.lh@dev-vn.vtl-lab.com
+cd /opt/docker/apps/ecpark/portal/www/
+cd /opt/docker/apps/ecpark/web/wwwe
+sudo git pull https://gitlab.com/vtl-solutions/bosonic-loan/bosonic-loan-web.git new-staging
+
+
+
+so sanh gia 
+
+gia ban hien tai  / gia trung binh 
+if > 1 -> tang 
+else -> 100% -> giam 

@@ -1,0 +1,347 @@
+regions 
++ id 
++ enabled 
++ created
++ created_by
++ modified
++ modified_by
+
+region_languages 
++ id 
++ region_id
++ alias 
++ name
+
+districts
++ id 
++ region_id 
++ created
++ created_by
++ modified
++ modified_by
+
+district_languages 
++ id 
++ district_id
++ alias 
++ name
+
+subdistricts
++ id 
++ district_id
++ created
++ created_by
++ modified
++ modified_by
+
+subdistrict_languages 
++ id 
++ subdistrict_id
++ created
++ created_by
++ modified
++ modified_by
+
+languages 
++ id 
++ alias 
++ name 
++ is_default
+
+product_types: 
++ id 
++ enabled
++ created
++ created_by
++ modified
++ modified_by
+
+product_type_languages: 
++ id 
++ name
++ alias
+
+
+product 
++ id
++ ECid:  （放盤編號）
++ category_id (特大車位，室內， 業主免用)
++ product_type_id: rent, buy 
++ member_id
++ region_id 
++ district_id
++ subdistrict_id
++ description (string) （車位簡介）
++ number_of_houldhold 10    （車位比例）
++ number_of_parkingcar 1    （車位比例）
++ is_star_recommendation （星級推介）(default: 0)
++ properties： 物業座數 （string）
++ Total number of parking spaces： （車位總數）： 487個
++ management_fee: $300/月  (for buy）
++ Government Rates: 地租差餉： 約$300   (for buy）
++ Agency commission: 代理佣金 (for buy）
+
++ price （售185萬） 1.850.000
++ contact_title: Mr  
++ contact_person: 
++ contact_email:
++ contact_phone:  
++ enabled
++ created （刊登日期）
++ created_by
++ modified
++ modified_by
+
+
+
+product_images
++ id 
++ size 
++ path 
++ product_id 
++ width
++ height 
+
+product_label （標籤， 最多3個）
++ id 
++ product_id 
++ label_name
++ enabled
++ created 
++ created_by
++ modified
++ modified_by
+
+
+product_options
++ id 
++ product_id 
++ option_id
++ created
++ created_by
++ modified
++ modified_by
+
+options
++ id 
++ enabled
++ created
++ created_by
++ modified
++ modified_by
+
+option_languages:
++ id 
++ name 
++ alias 
++ created
++ created_by
++ modified
++ modified_by
+
+reports 
++ id
++ product_id
++ content 
++ created
++ created_by
++ modified
++ modified_by
+
+- 智能配對車位？？？？ （login 了才配對）？
+parking_requirements
++ id 
++ type: rent / buy 
++ region_id
++ district_id
++ subdistrict_id
++ name 
++ price 
++ enabled 
++ created
++ created_by
++ modified
++ modified_by
+
+
+
+
+
+
+product_languages  
++ id 
++ product_id
++ name 
++ alias
+
+product_images 
++ id 
++ product_id
++ path
++ size 
++ width
++ height
++ name
+
+
+
+
+
+news_categories 
++ id 
++ enabled
++ created
++ created_by
++ modified
++ modified_by
+
+news_category_languages
++ id 
++ alias
++ name  （車位資訊），（買賣貼士）， （車位新聞）， （新盤消息）
+
+news
++ id
++ news_category_id 
++ is_hot_news (1, 0)
++ enabled
++ created
++ created_by
++ modified
++ modified_by
+
+news_languages
++ id
++ name 
++ alias 
+
+（page 1， 最近成交）
+transactions 
++ id 
++ product_id 
++ region_id
++ district_id
++ subdistrict_id
++ enabled 
++ created
++ created_by
++ modified
++ modified_by
+
+analyst_report_categories
++ id 
+
+
+analyst_report_category_languages
++ id 
++ analyst_report_category_id 
++ name (交通主要指揮， 車輛登記領牌統計， 駕駛執照特有統計， 停車場統計數字)
++ alias 
+
+
+
+數據報告
+analyst_reports 
++ id 
++ ECid 
++ analyst_report_category_id
++ enabled 
++ created
++ created_by
++ modified
++ modified_by
+
+
+analyst_report_files 
++ id 
++ path 
++ name 
++ size 
+
+
+members 
++ id 
++ phone
++ google_id
++ facebook_id
++ password 
++ name 
++ email
++ Company_ECid (公司地產代理牌照編號)
++ Person_ECid (個人地產代理牌照編號)
++ company_phone 
++ company_address
+
+member_images
++ id 
++ image_types_id (1: avatar, 2, 地產代理證)
++ path 
++ size 
++ width 
++ height 
+
+member_faviours
++ id 
++ member_id
++ product_id
++ enabled (1, 0)
++ created
++ created_by
++ modified
++ modified_by
+
+member_subscritions
++ id 
++ member_id 
++ product_id 
++ enabled (1, 0)
+
+member_messages 
++ id 
++ member_id  
++ title 
++ content 
++ is_read (1: read, 0: not yet)
++ enabled (1, 0)
++ created
++ created_by
++ modified
++ modified_by
+
+
+member_companies 
++ id 
++ member_id 
++ name 
++ alias (zho, eng) 
+
+member_verifications
++ id
++ member_id
++ verification_type_id
++ email 
++ zip_code 
++ phone 
++ code 
++ is_used 
++ verified 
++ created
++ created_by
++ modified
++ modified_by
+
+verification_types
++ id 
++ enabled 
++ created 
++ created_by
++ modified
++ modified_by
+
+verification_type_languages
++ id 
++ name 
++ alias 
+
+
+

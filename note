@@ -1,0 +1,448 @@
+
+----- note cakephp 4 codsnippet
+if (isset($data_search['status']) && $data_search['status'] != "") {
+    $_conditions['Districts.enabled'] = intval($data_search['status']);
+}
+
+if (isset($data_search['region_id']) && $data_search['region_id'] != "") {
+    $_conditions['Districts.region_id'] = $data_search['region_id'];
+}
+
+if (isset($data_search['name']) && !empty($data_search['name'])) {
+    $__conditions['LOWER(DistrictLanguages.name) LIKE'] = '%'. trim(strtolower($data_search['name'])). '%';
+}
+
+///- ---- paginate with join
+$query = $this->Districts->find('all', array(
+    'fields' => [
+        'Districts.id',
+        'Districts.enabled',
+        'Districts.created',
+        'Districts.modified',
+        'DistrictLanguages.name',   
+    ],
+    'conditions' => $_conditions,
+    'order' => [
+        'Districts.modified DESC',
+        'Districts.created DESC',
+        'Districts.id DESC'
+    ],
+    'contain' => [
+        'Regions' => [
+            'fields' => [
+                'Regions.id'
+            ],
+            'RegionLanguages' => [
+                'conditions' => [
+                    'RegionLanguages.alias' => $this->lang18,
+                ],
+            ],
+        ],
+        'CreatedBy', 
+        'ModifiedBy'
+    ],
+    'join' => [
+        'table' => 'district_languages',
+        'alias' => 'DistrictLanguages',
+        'type'  => 'INNER',
+        'conditions' => array_merge($conditions, $__conditions),
+    ]
+));
+
+
+$districts = $this->paginate($query, array(
+    'limit' => Configure::read('web.limit')
+));
+
+// --------- count 
+$query = $this->find()
+    ->where([
+        'MemberVerifications.member_id' => $member_id,
+        'DATE(MemberVerifications.created)' => date('Y-m-d'),
+    ]);
+$count = $query->count();
+
+
+<?php   // combobox
+    echo $this->Form->control('region_id', [
+        'empty' => __('please_select'),
+        'required' => true,
+        'escape' => false,
+        'data-live-search' => true,
+        'class' => 'selectpicker form-control', 'options' => $regions,
+        'label' => "<font class='red'> * </font>" . __d('setting', 'region')
+        
+    ]);
+
+
+// ----
+
+public function get_list($language)
+{
+    $regions = $this->find(
+        'list',
+        [
+            'keyField' => 'id',
+            'valueField' => function ($row) {
+                return $row->region_languages[0]->name;
+            }
+        ]
+    )->contain([
+            'RegionLanguages' => [
+                'conditions' => ['RegionLanguages.alias' => $language]
+            ]
+        ]
+    );
+
+    return $regions;
+}
+
+// tuyet chieu
+// admin add
+
+$regions = $this->Products->Regions->get_list($this->lang18);
+
+$this->set(compact('product', 'productTypes', 'members', 'regions', 'contactTitles', 'districts', 'subdistricts'));
+
+// admin edit
+$regions = $this->Products->Regions->get_list($this->lang18);
+
+$conditions = array(
+    'Districts.region_id' => $product->region_id,
+);
+$districts = $this->Products->Districts->get_list($this->lang18, $conditions);
+
+$conditions = array(
+    'Subdistricts.district_id' => $product->district_id,
+);
+$subdistricts = $this->Products->Subdistricts->get_list($this->lang18, $conditions);
+$this->set(compact('product', 'productTypes', 'members', 'regions', 'contactTitles', 'districts', 'subdistricts'));
+
+
+// ----
+transaction
+$db = $this->Administrators->getConnection();
+$db->begin();
+$db->commit();
+$db->rollback();
+
+// ---
+form add/edit upload file
+<?= $this->Form->create($member, ['type' => 'file']) ?>
+
+// ---
+$this->Number->format($product->price) === number_format
+
+// ---
+viet so nhieu slug imageTypes. vi trong addNewImageWithType co dung toi
+members-avatar
+
+// --- cat chuoi
+
+use Cake\Utility\Text;
+Text::truncate(h($product->description), 30, ['html' => true]); // Product/index
+
+
+ // create unique slug solution
+    public function create_unique_slug($name) {
+        $slug = Text::slug(h($name), '_');
+
+        $product = $this->find('all')
+            ->where([ 'Products.slug' => $slug ])
+            ->first();
+
+        while ($product) {
+            $slug = Text::slug(h($name), '_');
+
+            $product = $this->find('all')
+                ->where([ 'Products.slug' => $slug ])
+                ->first();
+        }
+
+        return $slug;
+    }
+
+
+// remove html element <p>22  </p> => 22
+html_entity_decode(Text::truncate(h($news->news_languages[0]->description), 30, ['html' => true])) 
+                                          
+
+// 2 days ago
+public function convert_time_to_days($date) {
+    $current_date = date("Y-m-d H:i:s"); 
+    $time = array();
+    $day = floor((strtotime($current_date) - strtotime($date)) / (60 * 60 * 24));
+
+    if ($day == 0) {
+        $hour = floor((strtotime($current_date) - strtotime($date)) / (60 * 60));
+
+        if ($hour == 0) {
+            $minute = floor((strtotime($current_date) - strtotime($date)) / (60));
+            $time = $minute . __d('chat', "minutes ago");
+
+        } else {
+            $time = $hour . __d('chat', "hours ago");
+        }
+    
+    } else {
+        $time = $day . __d('chat', "days ago");
+    }
+    
+    return $time;
+}
+
+public function convert_second_to_days($second) {
+    $time = array();
+    $day = floor($second / (60 * 60 * 24));
+
+    if ($day == 0) {
+        $hour = floor($second / (60 * 60));
+
+        if ($hour == 0) {
+            $minute = floor($second / (60));
+            $time = $minute . __d('course', "minutes");
+
+        } else {
+            $time = $hour . __d('course', "hours");
+        }
+    
+    } else {
+        $time = $day . __d('course', "days");
+    }
+    
+    return $time;
+}
+
+// convert frozentime to time 
+$value->created = Array
+(
+[0] => Cake\I18n\FrozenDate Object
+    (
+        [date] => 2022-08-01 00:00:00
+        [timezone_type] => 3
+        [timezone] => UTC
+    )
+)
+$value->created->format('Y-m-d H:i:s')
+
+// cache ----------------
+use Cake\Cache\Cache;
+$params = Cache::read('course_getAll');
+if ($params === null) {
+
+    $params = $this->Courses->get_all($data['language']);
+    Cache::write('course_getAll', $params);
+}
+
+// app.php 
+
+Cache = [
+    ...
+    'course_getAll' => [
+        'className' => 'Courses',
+        'path' => CACHE,
+        'serialize' => true,
+        'duration' => '+1 years',
+        'groups' => ['course_getAll'],
+    ],
+]
+// cache ----------------
+
+
+
+$currentDomain = $_SERVER['SERVER_NAME'];
+if (str_contains($currentDomain, 'localhost')) { // found
+    Configure::load('app_local', 'default');
+
+} elseif (str_contains($currentDomain, 'ecpark-portal.vtl-lab.com')) { // found
+    Configure::load('app_staging', 'default');
+
+} elseif (str_contains($currentDomain, 'dev-vn.vtl-lab.com:8060')) { // found
+    Configure::load('app_staging', 'default');
+
+}
+
+// count total record 
+$query = $this->find(
+    'all',
+    [
+        'conditions' => array_merge($conditions, [
+            'Products.enabled' => true,
+            'Products.product_type_id' => $data['product_type_id'],
+        ]),
+    ]
+);
+$total = $query->select(
+    ['count' => $query->func()->count('*')]
+);
+
+
+//
+
+// LUU Y, DONG NAY CHI DC DE O DONG CUOI CUNG,
+// BOI VI NEU DE TREN ELSE SE XAY RA LOI CALL API TU DUOI CLIENT
+$this->Api->set_result(500, __('invalid_method'), []);
+$this->Api->output($this);
+
+
+// ---------- BUG ----------
+
+if ($this->request->is('post')) {
+} else {
+    $db->rollback();
+    $this->response = $this->response->withStatus(500);
+    $this->Api->set_result(500, __('invalid_method'), []);
+    $this->Api->output($this);
+    $status = 999;
+    $message =  __('invalid_method');
+
+} catch (\Exception $e) {
+    $db->rollback();
+    $status = 999;
+    $message = $e->getMessage();
+    $this->response = $this->response->withStatus(500);
+}
+return_data:
+$this->Api->set_result($status, $message, $params);
+$this->Api->output($this);
+
+// ---------- FIX ----------
+$db = $this->Members->getConnection();
+$db->begin();
+if ($this->request->is('post')) {
+} else {
+    $db->rollback();
+    $status = 999;
+    $message =  __('invalid_method');
+
+} catch (\Exception $e) {
+    $db->rollback();
+    $status = 999;
+    $message = $e->getMessage();
+    $this->response = $this->response->withStatus(500);
+}
+return_data:
+$this->Api->set_result($status, $message, $params);
+$this->Api->output($this);
+
+// ---- OR CONDITIONS
+
+$conditions = [
+    'News.enabled' => true,
+    'OR' => [
+        'LOWER(News.slug) LIKE' => '%' . trim(strtolower($data['keyword'])) . '%',
+        'LOWER(NewsLanguages1.name) LIKE' => '%' . trim(strtolower($data['keyword'])) . '%',
+        'LOWER(NewsLanguages1.description) LIKE' => '%' . trim(strtolower($data['keyword'])) . '%',
+    ],
+];
+
+$news = $this->find('all', [
+    'conditions' => $conditions,
+    
+    'contain' => [
+        'NewsTypes' => [
+            'fields' => [
+                'NewsTypes.id',
+                'NewsTypes.slug',
+            ],
+            'NewsTypeLanguages' => [
+                'fields' => [
+                    'NewsTypeLanguages.news_type_id',
+                    'NewsTypeLanguages.name',
+                ],
+                'conditions' => [
+                    'NewsTypeLanguages.alias' => $data['language'],
+                ],
+            ],
+        ],
+        'NewsLanguages' => [
+            'fields' => [
+                'NewsLanguages.news_id',
+                'NewsLanguages.name',
+                'NewsLanguages.description',
+            ],
+            'conditions' => [
+                'NewsLanguages.alias' => $data['language'],
+            ],
+        ],
+        'NewsImages' => [
+            'fields' => [
+                'NewsImages.news_id',
+                'NewsImages.path',
+            ],
+        ]
+    ],
+    'join' => [
+        'table' => 'news_languages',
+        'alias' => 'NewsLanguages1',
+        'type'  => 'INNER',
+        'conditions' => array(
+            'NewsLanguages1.news_id = News.id',
+            'NewsLanguages1.alias' => $data['language'],
+        ),
+    ],
+    'limit' => $limit,
+    'order' => 'News.created DESC'
+]);
+
+if (!$news) {
+    goto return_data;
+}
+
+$result = $this->show_output($news->toArray());
+
+return_data:
+return array(
+    'status'    => $status,
+    'message'   => $message,
+    'params'    => $result,
+);
+}
+
+// ----- calc file size
+
+
+
+public function calc_file_size($bytes)
+{
+    if ($bytes >= 1073741824) {
+        $bytes = ceil($bytes / 1073741824) . ' GB';
+    } else if ($bytes >= 1048576) {
+        $bytes = ceil($bytes / 1048576) . ' MB';
+    } else if ($bytes >= 1024) {
+        $bytes = ceil($bytes / 1024) . ' KB';
+    } else if ($bytes > 1) {
+        $bytes = $bytes . ' bytes';
+    } else if ($bytes == 1) {
+        $bytes = $bytes . ' byte';
+    } else {
+        $bytes = '0 byte';
+    }
+
+    return $bytes;
+}
+// ---- delete all note cannot use MODEL.fields 
+// <----- WRONG (CppclRecords.registration_date) T_T WRONG
+
+$obj_CppclRecords->deleteAll(array(
+    'YEAE(registration_date) = ' . $year, 
+    'MONTH(registration_date) = ' . $month,
+));
+
+// ------------------------------------------------------------------------------------------------------
+// --- another way for limit record on index page, no need use query
+
+$this->paginate = [
+    'order' => [ 
+        'registration_date DESC',
+        'id DESC'
+    ],
+];
+$cppclRecords = $this->paginate($this->CppclRecords, array(
+    'limit' => Configure::read('web.limit')
+));
+
+$this->set(compact('cppclRecords'));
+// ------------------------------------------------------------------------------------------------------
+
+https://www.netlify.com/

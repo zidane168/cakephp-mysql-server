@@ -1,0 +1,131 @@
+msgid "product"
+msgstr "車位"
+
+msgid "add_product"
+msgstr "新增車位"
+
+msgid "edit_product"
+msgstr "編輯車位"
+
+msgid "products"
+msgstr "車位一覽"
+
+msgid "product_type"
+msgstr "車位分類經營"
+
+msgid "number_of_houldhold"
+msgstr "人口數量"
+
+msgid "number_of_parkingcar"
+msgstr "車位數量"
+
+msgid "is_star_recommendation"
+msgstr "是否星級推介？"
+
+msgid "properties"
+msgstr "物業座數"
+
+msgid "total_number_of_parking_space"
+msgstr "車位總數"
+
+msgid "management_fee"
+msgstr "管理費"
+
+msgid "government_rates"
+msgstr "地租差餉"
+
+msgid "agency_commission"
+msgstr "代理佣金"
+
+msgid "price"
+msgstr "價格"
+
+msgid "contact_title"
+msgstr "聯繫稱呼"
+
+msgid "contact_person"
+msgstr "聯繫名稱"
+
+msgid "contact_email"
+msgstr "聯繫郵件"
+
+msgid "contact_phone"
+msgstr "聯繫電話號碼"
+
+msgid "description"
+msgstr "車位簡介"
+
+msgid "image"
+msgstr "車位圖片"
+
+msgid "rent"
+msgstr "出租"
+
+msgid "sell"
+msgstr "出售"
+
+msgid "price_big_than"
+msgstr "價格大於"
+
+msgid "label"
+msgstr "車位標籤"
+
+msgid "product_option"
+msgstr "車位類型"
+
+msgid "product_options"
+msgstr "車位類型一覽"
+
+msgid "add_product_option"
+msgstr "新增車位類型"
+
+msgid "edit_product_option"
+msgstr "編輯車位類型"
+
+msgid "plugin"
+msgstr "車位附件"
+
+msgid "plugins"
+msgstr "車位附件一覽"
+
+msgid "add_plugin"
+msgstr "新增車位附件"
+
+msgid "edit_plugin"
+msgstr "編輯車位附件"
+
+msgid "label"
+msgstr "車位標籤"
+
+msgid "labels"
+msgstr "車位標籤一覽"
+
+msgid "add_label"
+msgstr "新增車位標籤"
+
+msgid "edit_label"
+msgstr "編輯車位標籤"
+
+msgid "product_violate"
+msgstr "舉報車位"
+
+msgid "product_violates"
+msgstr "舉報車位一覽"
+
+msgid "add_product_violate"
+msgstr "新增舉報車位"
+
+msgid "edit_product_violate"
+msgstr "編輯舉報車位"
+
+msgid "ai_pairing"
+msgstr "智能配對車位數據"
+
+msgid "ai_pairings"
+msgstr "智能配對車位數據一覽"
+
+msgid "add_ai_pairing"
+msgstr "新增智能配對車位數據"
+
+msgid "edit_ai_pairing"
+msgstr "編輯新增智能配對車位數據"

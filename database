@@ -1,0 +1,24 @@
+SELECT @@VERSION
+
+CREATE DATABASE vmc;
+
+
+CREATE TABLE members (
+    id INT NOT NULL PRIMARY KEY,
+    name varchar(191),
+    enabled INT DEFAULT '1',
+    created DATETIME DEFAULT NULL,
+    created_by INT DEFAULT NULL,
+    modified DATETIME DEFAULT NULL,
+    modified_by INT DEFAULT NULL,
+
+)
+
+SELECT TOP (1000) [id]
+      ,[name]
+      ,[enabled]
+      ,[created]
+      ,[created_by]
+      ,[modified]
+      ,[modified_by]
+  FROM [vmc].[dbo].[members]

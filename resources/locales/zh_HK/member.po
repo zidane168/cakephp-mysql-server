@@ -1,0 +1,87 @@
+msgid "member"
+msgstr "會員"
+
+msgid "members"
+msgstr "會員一覽"
+
+msgid "add_member"
+msgstr "新增會員"
+
+msgid "edit_member"
+msgstr "編輯會員"
+
+msgid "company_ECid"
+msgstr "公司 ECID"
+
+msgid "person_ECid"
+msgstr "個人 ECID"
+
+msgid "company_phone"
+msgstr "公司電話號碼"
+
+msgid "company_address"
+msgstr "公司地址"
+
+msgid "invalid_member"
+msgstr "會員質料錯誤"
+
+msgid "phone_not_found"
+msgstr "會員不存在"
+
+msgid "invalid_password"
+msgstr "密碼錯誤"
+
+msgid "register_succeed"
+msgstr "註冊會員成功"
+
+msgid "invalid_code"
+msgstr "驗證碼錯誤"
+
+msgid "verification_method"
+msgstr "驗證碼方法"
+
+msgid "verification_type"
+msgstr "驗證碼類型"
+
+msgid "is_used"
+msgstr "已使用"
+
+msgid "code"
+msgstr "驗證碼"
+
+msgid "member_verifications"
+msgstr "會員驗證頁面一覽"
+
+msgid "member_verification"
+msgstr "會員驗證頁面"
+
+msgid "add_member_verification"
+msgstr "新增會員驗證頁面"
+
+msgid "edit_member_verification"
+msgstr "編輯會員驗證頁面"
+
+msgid "send_sms_successfully"
+msgstr "成功發送信息"
+
+msgid "verification_code_sms"
+msgstr "謝謝註冊為會員，您的帳戶驗證碼是: {0}，於{1}內有效，請於限時內完成首次登入"
+
+msgid "forgot_password"
+msgstr "忘記密碼的驗證碼是: {0}，於{1}內有效，請於限時內完成首次登入"
+
+msgid "ai_pairing"
+msgstr "智能配對車位的驗證碼是: {0}，於{1}內有效，請於限時內完成首次登入"
+
+msgid "sms_over_sent_on_day"
+msgstr "發送SMS最多{3}次/天"
+
+msgid "agency_company_name"
+msgstr "代理公司名稱"
+
+msgid "exist_phone"
+msgstr "電話號碼已存在"
+
+msgid "invalid_code"
+msgstr "驗證碼錯誤"
+

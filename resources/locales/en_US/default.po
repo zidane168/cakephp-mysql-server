@@ -1,0 +1,146 @@
+msgid "good_morning"
+msgstr "Good morning, "
+
+msgid "good_afternoon1"
+msgstr "Good afternoon, "
+
+msgid "good_afternoon"
+msgstr "Good afternoon, "
+
+msgid "good_evening"
+msgstr "Good evening,  "
+
+msgid "zh_CN_name"
+msgstr "简体中文"
+
+msgid "zh_HK_name"
+msgstr "繁体中文"
+
+msgid "en_US_name"
+msgstr "English"
+
+msgid "id"
+msgstr "Id"
+
+msgid "slug"
+msgstr "Slug"
+
+msgid "name"
+msgstr "Name"
+
+msgid "modified_by"
+msgstr "Modified By"
+
+msgid "created_by"
+msgstr "Created By"
+
+msgid "modified"
+msgstr "Modified"
+
+msgid "created"
+msgstr "Created"
+
+msgid "add"
+msgstr "Add"
+
+msgid "edit"
+msgstr "Edit"
+
+msgid "view"
+msgstr "View"
+
+msgid "delete"
+msgstr "Delete"
+
+msgid "enabled"
+msgstr "Enabled"
+
+msgid "email"
+msgstr "Email"
+
+msgid "phone"
+msgstr "Phone"
+
+msgid "delete_all"
+msgstr "Delete all"
+
+msgid "operation"
+msgstr "Operataion"
+
+msgid "submit"
+msgstr "Submit"
+
+msgid "reset"
+msgstr "Reset"
+
+msgid "export"
+msgstr "Export CSV"
+
+msgid "export_excel"
+msgstr "Export Excel"
+
+msgid "please_select"
+msgstr "-- Please Select --"
+
+msgid "sign_in"
+msgstr "Sign in"
+
+msgid "sign_out"
+msgstr "Sign out"
+
+msgid "remember_me"
+msgstr "Remember me"
+
+msgid "password"
+msgstr "Password"
+
+msgid "user_is_logged_out"
+msgstr "User is logged out"
+
+msgid "retrieve_data_successfully"
+msgstr "Retrieve data successfully"
+
+msgid "retrieve_data_not_successfully"
+msgstr "Retrieve data not successfully"
+
+msgid "image_type"
+msgstr "Image Type"
+
+msgid "image"
+msgstr "Image"
+
+msgid "status"
+msgstr "Status"
+
+msgid "all"
+msgstr "All"
+
+msgid "yes"
+msgstr "Yes"
+
+msgid "no"
+msgstr "No"
+
+msgid "data_is_saved"
+msgstr "Data is saved"
+
+msgid "data_is_not_saved"
+msgstr "Data is not saved"
+
+msgid "export_pdf"
+msgstr "Export PDF"
+
+msgid "order_image"
+msgstr "Order image"
+
+msgid "guideline"
+msgstr "Guideline"
+
+msgid "delete_message"
+msgstr "Are you sure to delete record with id={0}?"
+
+msgid "data_is_deleted"
+msgstr "Data is deleted"
+
+msgid "missing_parameter"
+msgstr "Missing parameter: "

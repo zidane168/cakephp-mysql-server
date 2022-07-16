@@ -1,0 +1,2 @@
+msgid "member"
+msgstr "Member"

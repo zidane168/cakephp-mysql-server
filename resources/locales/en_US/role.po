@@ -1,0 +1,12 @@
+
+msgid "role"
+msgstr "Role"
+
+msgid "roles"
+msgstr "Roles"
+
+msgid "add_role"
+msgstr "Add Role"
+
+msgid "edit_role"
+msgstr "Edit Role"

@@ -1,0 +1,26 @@
+msgid "company"
+msgstr "公司"
+
+msgid "companies"
+msgstr "公司一覽"
+
+msgid "add_company"
+msgstr "新增公司"
+
+msgid "edit_company"
+msgstr "編輯公司"
+
+msgid "last_logged_in"
+msgstr "最近登入時間"
+
+msgid "contact_person"
+msgstr "聯繫人名稱"
+
+msgid "contact_job_title"
+msgstr "聯繫人職位"
+
+msgid "contact_email"
+msgstr "聯繫人的電郵地址"
+
+msgid "contact_phone"
+msgstr "聯繫人的電話號碼"
